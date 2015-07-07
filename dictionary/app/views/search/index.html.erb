@@ -1,0 +1,134 @@
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+<script src="/js/autocomplete.js"></script>
+<script src="/js/jquery.tinyscrollbar.min.js"></script>
+<script src="/js/playexample.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('#scrollbar1').tinyscrollbar();
+    });
+</script>
+<h1>
+    Dictionary Vietname-Janpan
+</h1>
+<div class="ui-search"">
+    <%= form_tag("/search", method: "get") do %>
+    <%= select_tag :language, options_for_select([['Vietnamese to Japanese', 'vietnamese'], ['Japanese to Vietnamese', 'japanese']], :selected => params[:language]) %>
+    <br />
+    <%= text_field_tag(:search,params[:search]) %>
+    <%= submit_tag("Search",class: "search_button") %>
+    <% end %>
+</div>
+<div class="ul-show" id="ul-show">
+</div>
+<div class="cont-left">
+    <div class="link-total-box">
+        <div class="link-total">
+            <h2>Vocabulary</h2>
+            <div class="message">
+                <%if params[:language] && @data.length==0%>
+                    Could not find "<%= params[:search]%>"
+                <%end%>
+            </div>
+            <div class="line5">
+            </div>
+            <div id="scrollbar1">
+                <div class="scrollbar"><div class="track"><div class="thumb"><div class="end"></div></div></div></div>
+                <div class="viewport">
+                     <div class="overview">
+                        <ul>
+                            <%if @data
+                                if params[:language] =="vietnamese"%>
+                                    <% @data.each do |item| %>
+                                        <li>
+                                            <div class="link-left">
+                                                <a href="#" onclick="get_word_vi(<%=item.id%>)">
+                                                    <%=item.word_vietnamese.force_encoding("UTF-8")%>
+                                                </a>
+                                            </div>
+                                        </li>
+                                    <%end%>
+                                <%else%>
+                                    <% @data.each do |item| %>
+                                        <li>
+                                            <div class="link-left">
+                                                <a href="javascript:void(0)" onclick="get_word_ja(<%=item.id%>)">
+                                                    <%=item.word_japanese.force_encoding("UTF-8")%>
+                                                </a>
+                                            </div>
+                                        </li>
+                                    <%end%>
+                                <%end%>
+                            <%end%>
+                        </ul>
+
+                    </div>
+                </div>
+            </div><!--end scroll bar-->
+
+        </div><!--end link-total-->
+    </div>
+</div><!--end cont-left-->
+<div class="cont-right">
+    <div class="right-tab">
+        <div id="example-two">
+            <div id="word">
+                <%if @result%>
+                    <%if @language =="vietnamese"%>
+                    <div class="vocabulary"><%=@result.word_vietnamese.force_encoding("UTF-8")%></div>
+                    <%else%>
+                    <div class="vocabulary"><%=@result.word_japanese.force_encoding("UTF-8")%></div>
+                    <%end%>
+                    <%if @result.sound_word && @result.sound_word !="" %>
+                        <a onclick="playSound('/<%= @language%>/<%= @result.sound_word%>');" href="javascript:void(0)"><img class="img_sound" src="/images/icon_sound.ico"></a>
+                    <%end%>
+                    <br>
+                    <ul>
+                        <% @arr_translate.each do |tl| %>
+                            <li>
+                                <%= tl%>
+                            </li>
+                        <%end%>
+                    </ul>
+                <%else%>
+                    <div class="message">
+                        <%if params[:search] %>
+                            Could not find "<%= params[:search]%>"
+                        <%end%>
+                    </div>
+                <%end%>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th width="50%" >Example</th>
+                        <th ></th>
+                    </tr>
+                </thead>
+                <tbody id ="body_example">
+                    <%if @examples%>
+                        <% @examples.each do |ex| %>
+                        <tr>
+                            <td><%= ex.ex_vietnamese.force_encoding("UTF-8")%><a onclick="playExampleVi('<%= ex.ex_vietnamese.force_encoding("UTF-8")%>');" href="#"><img class="img_sound" src="/images/sound-on.png" ></a></td>
+                            <td><%= ex.ex_japanese.force_encoding("UTF-8")%><a onclick="playExampleJa('<%= ex.ex_japanese.force_encoding("UTF-8")%>');" href="#"><img class="img_sound" src="/images/sound-on.png" ></a></td>
+                        </tr>
+                        <%end%>
+                    <%end%>
+                </tbody>
+            </table>
+        </div> <!-- END-->
+    </div>
+</div><!--end cont-right-->
+<script charset="UTF-8">
+    var availableTags_vi = [
+    <% @vietnamese_word.each do |w| %>
+        "<%= w.word_vietnamese.force_encoding("UTF-8")%>",
+    <%end%>
+    ];
+    var availableTags_ja = [
+        <% @japanese_word.each do |w| %>
+            "<%= w.word_japanese.force_encoding("UTF-8")%>",
+            <%end%>
+    ];
+</script>

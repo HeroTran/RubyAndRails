@@ -1,0 +1,39 @@
+<h1>Listing examples</h1>
+<h2 style="text-align: left; margin-left: 65px;"> <%= link_to 'New Example', new_example_path %></h2>
+
+<div class="search_admin">
+	<%= form_tag(examples_path, method: "get") do %>
+	<%= text_field_tag(:search,params[:search],class: "text_search_admin") %>
+	<%= submit_tag "Search", class: "button_search_admin"%>
+	<% end %>
+</div>
+<div style="width: 100%">
+<table class="features-table" style="width: 200px;">
+	<thead>
+		<tr>
+			<th>Ex japanese</th>
+			<th>Ex vietnamese</th>
+			<th>Deleted</th>
+			<th></th>
+		</tr>
+	</thead>
+
+	<tbody>
+		<% @examples.each do |example| %>
+		<tr>
+			<td><%= example.ex_japanese.force_encoding("UTF-8")  %></td>
+			<td><%= example.ex_vietnamese.force_encoding("UTF-8")  %></td>
+			<% if example.deleted == 1%> <td> Deleted</td>
+			<%else%>
+			<td>Active</td>
+			<%end%>
+			<td><%= link_to 'Show', example %>
+			<%= link_to 'Edit', edit_example_path(example) %>
+			<%= link_to 'Destroy', example, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+		</tr>
+		<% end %>
+	</tbody>
+</table>
+<%= will_paginate @examples %>
+</div>
+

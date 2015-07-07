@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Admin</title>
+        <link data-turbolinks-track="true" href="/assets/login.css?body=1" media="all" rel="stylesheet" />
+        <link data-turbolinks-track="true" href="/assets/authentication.css?body=1" media="all" rel="stylesheet" />
+        <script data-turbolinks-track="true" src="/assets/application.js?body=1"></script>
+        <script data-turbolinks-track="true" src="/assets/jquery.js?body=1"></script>
+        <script data-turbolinks-track="true" src="/assets/jquery_ujs.js?body=1"></script>
+        <%= csrf_meta_tags %>
+        <%= csrf_meta_tags %>
+    </head>
+    <body>
+        <h2>Please Log In:</h2>
+        <div class="login-form">
+        	<% if flash.now[:alert]%>
+            <div class="error">
+                <%= flash.now[:alert]%>
+            </div>
+            <%end%>
+            <%= form_for @user, :as => :user, :url => login_path(@user) do |f| %>
+            <table cellspacing="0" align="center">
+                <tbody>
+                    <tr>
+                        <th class="label-cell"><label for="unField">Username:</label></th>
+                        <td class="field-cell"><%= f.text_field :user_name %></td>
+                    </tr>
+                    <tr>
+                        <th class="label-cell"><label for="pwField">Password:</label></th>
+                        <td class="field-cell"><%= f.password_field :user_password %></td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="submit-btn">
+                <%= f.submit 'Sign In' %>
+            </p>
+            <% end %>
+        </div>
+    </body>
+</html>
+

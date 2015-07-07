@@ -1,0 +1,28 @@
+<p id="notice">
+	<%= notice %>
+</p>
+
+<h1>Managerment user <%= @user.user_name %></h1>
+<table class="features-table">
+	<thead>
+		<tr>
+			<th>User name</th>
+			<th>User email</th>
+			<th>Deleted</th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><%= @user.user_name %></td>
+			<td> <%= @user.user_email %></td>
+			<% if @user.deleted == 1%>
+			<td> Deleted</td>
+			<%else%>
+			<td>Active</td>
+			<%end%>
+			<td><%= link_to 'Edit', edit_user_path(@user) %> |
+			<%= link_to 'Back', users_path %></td>
+		</tr>
+	</tbody>
+</table>

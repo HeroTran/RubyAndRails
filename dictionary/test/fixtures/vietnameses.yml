@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  word_vietnamese: MyString
+  word_japanese: MyString
+  sound_word: MyString
+  deleted: 0
+  note: MyString
+
+two:
+  word_vietnamese: MyString
+  word_japanese: MyString
+  sound_word: MyString
+  deleted: 0
+  note: MyString

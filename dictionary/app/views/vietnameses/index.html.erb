@@ -1,0 +1,42 @@
+<h1>Listing vietnameses</h1>
+<h2 style="text-align: left; margin-left: 130px;"> <%= link_to 'New Vietnamese', new_vietnamese_path %></h2>
+<div class="search_admin">
+	<%= form_tag(vietnameses_path, method: "get") do %>
+	<%= text_field_tag(:search,params[:search],class: "text_search_admin") %>
+	<%= submit_tag "Search", class: "button_search_admin"%>
+	<% end %>
+</div>
+<table class="features-table">
+	<thead>
+		<tr>
+			<th>Word vietnamese</th>
+			<th>Word japanese</th>
+			<th>Sound word</th>
+			<th>Note</th>
+			<th>Deleted</th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @vietnameses.each do |vietnamese| %>
+
+		<tr>
+			<td><%= vietnamese.word_vietnamese.force_encoding("UTF-8") %></td>
+			<td><%= vietnamese.word_japanese.force_encoding("UTF-8") %></td>
+			<td><%= vietnamese.sound_word %></td>
+			<td><%= vietnamese.note %></td>
+			<% if vietnamese.deleted == 1%>
+			<td> Deleted</td>
+			<%else%>
+			<td>Active</td>
+			<%end%>
+			<td><%= link_to 'Show', vietnamese%>
+			<%= link_to 'Edit', edit_vietnamese_path(vietnamese)%>
+			<%= link_to 'Destroy', vietnamese, method: :delete, data: { confirm: 'Are you sure?' }%></td>
+		</tr>
+
+		<%end%>
+	</tbody>
+</table>
+<%= will_paginate @vietnameses %>
+

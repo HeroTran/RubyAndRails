@@ -1,0 +1,34 @@
+<%= form_for(@example) do |f| %>
+  <% if @example.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@example.errors.count, "error") %> prohibited this example from being saved:</h2>
+
+      <ul>
+      <% @example.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <table class="table-language">
+		<tbody>
+			<tr>
+				<th><%= f.label :ex_japanese %></th>
+				<td><%= f.text_field :ex_japanese %></td>
+			</tr>
+			<tr>
+				<th><%= f.label :ex_vietnamese %></th>
+				<td><%= f.text_field :ex_vietnamese %></td>
+			</tr>
+			<tr>
+				<th><%= f.label :deleted %></th>
+				<td><%= select_tag :deleted, options_for_select([['On', '0'], ['Off', '1']], :selected => params[:deleted]) %></td>
+			</tr>
+
+			<tr>
+				<td colspan="2" style="text-align: center;"><%= f.submit %></td>
+			</tr>
+		</tbody>
+	</table>
+<% end %>

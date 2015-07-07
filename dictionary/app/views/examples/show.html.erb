@@ -1,0 +1,24 @@
+
+<table class="features-table">
+	<thead>
+		<tr>
+			<th>Ex japanese</th>
+			<th>Ex vietnamese</th>
+			<th>Deleted</th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td> <%= @example.ex_japanese %></td>
+			<td style="white-space: pre-line;"> <%= @example.ex_vietnamese %></td>
+			<% if @example.deleted == 1%>
+			<td> Deleted</td>
+			<%else%>
+			<td>Active</td>
+			<%end%>
+			<td><%= link_to 'Edit', edit_example_path(@example) %> |
+			<%= link_to 'Back', examples_path %> </td>
+		</tr>
+	</tbody>
+</table>

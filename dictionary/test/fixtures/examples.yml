@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ex_japanese: MyString
+  ex_vietnamese: MyString
+  deleted: 0
+
+two:
+  ex_japanese: MyString
+  ex_vietnamese: MyString
+  deleted: 0

@@ -1,0 +1,30 @@
+<h1>Listing users</h1>
+<h2 style="text-align: left; margin-left: 130px;"> <%= link_to 'New User', new_user_path %></h2>
+<table class="features-table">
+	<thead>
+		<tr>
+			<th>User name</th>
+			<th>User email</th>
+			<th></th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @users.each do |user| %>
+		<tr>
+			<td><%= user.user_name %></td>
+			<td><%= user.user_email %></td>
+			<% if user.deleted == 1%>
+			<td> Deleted</td>
+			<%else%>
+			<td>Active</td>
+			<%end%>
+			<td><%= link_to 'Show', user %>
+			<%= link_to 'Edit', edit_user_path(user) %>
+			<%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+		</tr>
+		<% end %>
+	</tbody>
+</table>
+
+

@@ -1,0 +1,305 @@
+/**
+ * 	Design Css
+ * author : Pham Quoc Thao
+ * date : 15/05/2014
+ */
+body {
+    width: 100%;
+    background: url(/images/bg.jpg);
+    margin: 0;
+    font-family: 'tahoma', 'arial', 'verdana';
+}
+
+.container {
+    width: 1000px;
+    padding: 10px;
+    background: #fff;
+    margin: 0 auto;
+    border-radius: 0px 0px 10px 10px;
+    margin-top: -20px;
+    box-shadow: 0px 0px 10px #666;
+    overflow: hidden;
+}
+.ui-search {
+    width: 450px;
+    padding: 10px;
+    margin: 30px auto 50px auto;
+    background: #FFFFFF;
+    border-radius: 5px;
+    text-align: center;
+}
+.ui-search .search_button {
+    background-color: #44c767;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    border: 1px solid #44c767;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Georgia;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 7px;
+    text-decoration: none;
+    text-shadow: 2px 2px 34px #2f6627;
+}
+.ui-search .search_button:hover {
+    background-color: #2A5736;
+    border: 1px solid #2A5736;
+}
+.ui-search .search_button:active {
+    position: relative;
+    top: 1px;
+}
+.ui-search .ui-autocomplete-input {
+    background: #F1F1F1 url('/assets/search.png') no-repeat;
+    background-position: 5px 10px !important;
+    padding: 10px 10px 10px 25px;
+    width: 270px;
+    border: 1px solid #CCC;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -moz-box-shadow: 0 1px 1px #ccc inset, 0 1px 0 #fff;
+    -webkit-box-shadow: 0 1px 1px #CCC inset, 0 1px 0 #FFF;
+    box-shadow: 0 1px 1px #CCC inset, 0 1px 0 #FFF;
+}
+.ui-search .ui-autocomplete-input:focus {
+    background-color: #FFF;
+    border-color: #E8C291;
+    outline: none;
+    -moz-box-shadow: 0 0 0 1px #e8c291 inset;
+    -webkit-box-shadow: 0 0 0 1px #E8C291 inset;
+    box-shadow: 0 0 0 1px #E8C291 inset;
+}
+h1 {
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+    text-shadow: 0px 1px 0px #999, 0px 2px 0px #888, 0px 3px 0px #777, 0px 4px 0px #666, 0px 5px 0px #555, 0px 6px 0px #444, 0px 7px 0px #333, 0px 8px 7px #001135;
+    font: 50px 'ChunkFiveRegular';
+}
+#language {
+    width: 268px;
+    margin-left: -120px;
+    margin-bottom: 10px;
+    padding: 5px;
+    border: 0;
+    border-radius: 0;
+    font-size: 16px;
+    line-height: 1;
+    height: 34px;
+    -webkit-appearance: none;
+    background: url('/assets/down_arrow_select.jpg') no-repeat right #ddd;
+    text-align: center;
+}
+.ul-show {
+}
+table {
+    color: #333;
+    font-family: Helvetica, Arial, sans-serif;
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+td, th {
+    border: 1px solid transparent; /* No more visible border */
+    height: 30px;
+    transition: all 0.3s; /* Simple transition for hover effect */
+}
+
+th {
+    background: #DFDFDF; /* Darken header a bit */
+    font-weight: bold;
+}
+td {
+    background: #FAFAFA;
+    text-align: center;
+}
+
+/* Cells in even rows (2,4,6...) are one color */
+tr:nth-child(even) td {
+    background: #F1F1F1;
+}
+
+/* Cells in odd rows (1,3,5...) are another (excludes header cells)  */
+tr:nth-child(odd) td {
+    background: #FEFEFE;
+}
+
+tr:hover td {
+    background: #666;
+    color: #FFF;
+}/* Hover cell effect! */
+/*css for list autocomplete*/
+.ui-autocomplete {
+    height: 200px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.cont-left {
+    width: 300px;
+    float: left;
+}
+.cont-right {
+    width: 680px;
+    margin-left: 10px;
+    float: left;
+}
+#example-two {
+    width: 660px;
+    height: 510px;
+    background: #e5e5e5;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.link-total-box {
+    width: 300px;
+    height: 532px;
+    padding: 1px;
+    border: 1px solid #ececec;
+    border-radius: 5px;
+
+}
+.link-total {
+    width: 300px;
+    height: 532px;
+    border-radius: 5px;
+    background: #ececec;
+    margin-top: -17px;
+}
+.link-total h2 {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 20px;
+}
+.link-total p {
+    color: #fd971c;
+    font-size: 16px;
+    font-weight: bold;
+    padding-left: 20px;
+    padding-top: 5px;
+}
+.line5 {
+    width: 280px;
+    margin: 0 auto;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #ccc;
+}
+
+.overview ul li {
+    width: 180px;
+    height: 28px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 0 auto;
+}
+.overview ul li:hover {
+    background: #ccc;
+    border-radius: 15px;
+}
+.link-left {
+    width: 220px;
+}
+.link-right {
+    float: left;
+    width: 95px;
+}
+.link-left a {
+    font-size: 12px;
+    color: #333;
+    font-weight: bold;
+    line-height: 28px;
+}
+.link-right p {
+    padding: 0px;
+    color: #333;
+    font-size: 12px;
+    text-align: right;
+    line-height: 28px;
+}
+
+.right-tab {
+    border: 1px solid #E5E5E5;
+    border-radius: 5px;
+    height: 530px;
+    padding: 1px;
+    width: 680px;
+}
+/* Tiny Scrollbar */
+#scrollbar1 {
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+#scrollbar1 .viewport {
+    width: 275px;
+    height: 420px;
+    overflow: hidden;
+    position: relative;
+}
+#scrollbar1 .overview {
+    list-style: none;
+    position: absolute;
+    left: 0;
+    top: 0 padding : 0;
+    margin: 0;
+}
+#scrollbar1 .scrollbar {
+    background: transparent url(/images/bg-scrollbar-track-y.png) no-repeat 0 0;
+    position: relative;
+    background-position: 0 0;
+    float: right;
+    width: 15px;
+}
+#scrollbar1 .track {
+    background: transparent url(/images/bg-scrollbar-trackend-y.png) no-repeat 0 100%;
+    height: 100%;
+    width: 13px;
+    position: relative;
+    padding: 0 1px;
+}
+#scrollbar1 .thumb {
+    background: transparent url(/images/bg-scrollbar-thumb-y.png) no-repeat 50% 100%;
+    height: 20px;
+    width: 25px;
+    cursor: pointer;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: -5px;
+}
+#scrollbar1 .thumb .end {
+    background: transparent url(/images/bg-scrollbar-thumb-y.png) no-repeat 50% 0;
+    overflow: hidden;
+    height: 5px;
+    width: 25px;
+}
+#scrollbar1 .disable {
+    display: none;
+}
+.noSelect {
+    user-select: none;
+    -o-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+}
+.message{
+    color: #FF6633;
+    font-size: 14px;
+    text-align: center;
+}
+/* Tiny Scrollbar */
+.img_sound{
+    height:20px;
+    width:20px;
+}
+.vocabulary{
+    font-size: 30px;
+}

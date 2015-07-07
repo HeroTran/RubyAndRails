@@ -1,0 +1,38 @@
+<h1>New user</h1>
+<%= form_for(@user) do |f| %>
+<% if @user.errors.any? %>
+<div id="error_explanation">
+	<h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+	<ul>
+		<% @user.errors.full_messages.each do |msg| %>
+		<li>
+			<%= msg %>
+		</li>
+		<% end %>
+	</ul>
+</div>
+<% end %>
+
+<table class="table-language">
+	<tbody>
+		<tr>
+			<th><%= f.label :user_name %></th>
+			<td><%= f.text_field :user_name %><%= @user.errors[:user_name][0] %></td>
+		</tr>
+		<tr>
+			<th> <%= f.label :user_password %>
+			<br>
+			</th>
+			<td><%= f.text_field :user_password %><%= @user.errors[:user_password][0] %></td>
+		</tr>
+		<tr>
+			<th><%= f.label :user_email %></th>
+			<td><%= f.text_field :user_email %><%= @user.errors[:user_email][0] %></td>
+		</tr>
+		<tr>
+			<<td class="bottom" colspan="2"><%= f.submit nil,  :class => 'button'%></td>
+		</tr>
+	</tbody>
+</table>
+<%end%>
+<%= link_to 'Back', users_path %>

@@ -1,0 +1,201 @@
+/*----------------------------------------------------------
+GENERAL FORM STYLES
+----------------------------------------------------------*/
+
+#formContainer {
+	width: 860px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+div.fieldset-container {
+	margin: 12px auto;
+}
+
+fieldset {
+	margin: 0 auto;
+	padding: 0;
+	border: 1px solid #8ccbdc;
+	border: 1px solid #dddddd;
+}
+
+div.fieldset-pad {
+	padding: 10px 0 15px 0;
+	position: relative;
+}
+
+legend {
+	font-size: 16px;
+	line-height: 20px;
+	font-family: Georgia, "Times New Roman", serif;
+	font-weight: normal;
+	color: #0089b0;
+	margin-left: 24px;
+	margin-right: auto;
+	text-align: left;
+}
+
+	#formContainer table.fieldset-table {
+		margin: 0 auto;
+	}
+	
+	#formContainer table.basic {
+		width: 820px;
+	}
+		
+		#formContainer table.basic td, #formContainer table.basic th {
+			margin: 0;
+			padding: 2px;
+		}
+	
+		#formContainer table.basic th {
+			text-align: right;
+			font-weight: normal;
+			color: #000000;
+			width: 28%;
+			background-color: #eeeeee;
+			padding-right: 6px;
+		}
+		
+		#formContainer table.basic td {
+			text-align: left;
+			width: 72%;
+		}
+	
+	#formContainer table.centered td, #formContainer table.centered th {
+		padding: 3px 0;
+	}
+	
+	#formContainer table.centered th {
+		color: #0089b0;
+		font-weight: bold;
+		font-size: 13px;
+		line-height: 16px;
+	}
+	
+	#formContainer p.textarea-label {
+		display: block;
+		background-color: #eeeeee;
+		margin: 12px 0 0 0;
+		padding: 3px;
+		color: #000000;
+	}
+	
+	#formContainer p.notes {
+		margin-top: 1px !important;
+	}
+	
+	#formContainer p.textarea {
+		margin: 0;
+	}
+		
+.text-field, textarea {
+	border: 1px solid #6aa9c6;
+	padding: 2px;
+}
+
+.required {
+	color: #bb0000;
+}
+	
+	span.required {
+		margin-right: 2px;
+		margin-left: 2px;
+	}
+
+/*----------------------------------------------------------
+ERROR REPORTING
+----------------------------------------------------------*/
+
+.error-report fieldset {
+	border: 2px solid #bb0000;
+}
+
+.error-report legend {
+	color: #bb0000;
+}
+
+.error-report .fieldset-pad {
+	padding: 8px;
+}
+
+.error-report .error-container {
+	text-align: left;
+	margin: 0;
+	padding: 4px;
+	background-color: #ffffbb;
+	border: 1px solid #fff099;
+	color: #bb0000;
+}
+
+/*----------------------------------------------------------
+INLINE FORM ERROR MESSAGE STYLES
+----------------------------------------------------------*/
+
+.form-inline-error {
+	border: 1px solid #aa0000;
+	margin: 12px auto;
+	padding: 8px;
+	background-color: #ffffaa;
+}
+
+	.form-inline-error ul {
+		margin-top: 0;
+		margin-bottom: 0;
+		text-align: left;
+	}
+		
+		.form-inline-error li {
+			color: #aa0000;
+		}
+	
+	.form-inline-error p {
+		display: block;
+		margin: 0;
+		padding: 0;
+		text-align: center;
+		color: #aa0000;
+	}
+
+/*----------------------------------------------------------
+DYANAMIC SETS (EMAIL, PHONE, ETC.)
+----------------------------------------------------------*/
+
+.dynamic-set {
+	padding: 2px 0;
+}
+	
+	.dynamic-set p.add-new {
+		margin: 0;
+	}
+
+/*----------------------------------------------------------
+CALENDARS AND SPECIAL SELECTORS
+----------------------------------------------------------*/
+
+.cal-display {}
+	
+.date-field img, .team-field img {
+	vertical-align: middle;
+	display: inline-block;
+}
+
+.cal-display span, .team-display span {
+	font-size: 13px;
+	line-height: 16px;
+	vertical-align: middle;
+	display: inline-block;
+	margin-left: 5px;
+}
+	
+	.cal-display span.empty, .team-display span.empty {
+		color: #aa0000;
+	}
+	
+	.cal-display span.date, .team-display span.team {
+		color: #000000;
+	}
+
+
+
+

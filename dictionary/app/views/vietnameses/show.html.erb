@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+<table class="features-table">
+	<thead>
+		<tr>
+			<th>Word vietnamese</th>
+			<th>Word japanese</th>
+			<th>Sound word</th>
+			<th>Deleted</th>
+			<th>Note</th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><%= @vietnamese.word_vietnamese %></td>
+			<td style="white-space: pre-line;"><%= @vietnamese.word_japanese %></td>
+			<td><%= @vietnamese.sound_word %></td>
+			<% if @vietnamese.deleted == 1%>
+			<td>
+				Deleted</td>
+				<%else%>
+				<td>Active</td>
+				<%end%>
+			<td><%= @vietnamese.note %></td>
+			<td><%= link_to 'Edit', edit_vietnamese_path(@vietnamese) %> |
+			<%= link_to 'Back', vietnameses_path %> </td>
+		</tr>
+	</tbody>
+</table>

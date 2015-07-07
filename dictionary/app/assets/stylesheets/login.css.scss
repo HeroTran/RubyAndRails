@@ -1,0 +1,118 @@
+/*------------------------------------------------------------
+LOGIN FORM
+------------------------------------------------------------*/
+body {
+  width: 100%;
+  background-color: #FFFFFF;
+  margin: 0;
+  font-family: 'tahoma', 'arial', 'verdana';
+}
+h2 {
+  color: #2d74ad;
+  font-weight: normal;
+  font-size: 22px;
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 20px;
+  text-align: center;
+}
+
+.login-form table {
+  margin: 0 auto;
+  background-color: #eeeeee;
+  border: 1px solid #cccccc;
+
+}
+
+.login-form th.label-cell {
+  padding: 6px;
+  text-align: right;
+  color: #000000;
+  font-weight: normal;
+}
+
+.login-form td.field-cell {
+  padding: 6px;
+  text-align: left;
+}
+
+.login-form td.field-cell input {
+  border: 2px solid #343434;
+  padding: 2px;
+  background-color: #ffffff;
+}
+
+.login-form p.submit-btn {
+  display: block;
+  margin: 0;
+  padding: 9px;
+  text-align: center;
+}
+
+.login-form td.error-cell {
+  background-color: #ffffaa;
+  color: #aa0000;
+  text-align: center;
+  padding: 6px;
+}
+
+/*------------------------------------------------------------
+RESET FORM
+------------------------------------------------------------*/
+
+.reset-form {
+  padding-top: 50px;
+  padding-bottom: 12px;
+}
+
+.reset-form label {
+  color: #000000;
+}
+
+.reset-confirm-msg {
+  border: 1px solid #cccccc;
+  margin: 15px auto;
+  width: 460px;
+  background-color: #ffffdd;
+}
+
+.reset-confirm-msg p {
+  display: block;
+  margin: 0;
+  padding: 10px;
+  color: #008812;
+  text-align: left;
+}
+
+/*------------------------------------------------------------
+RESET CONFIRMATION/ERROR
+------------------------------------------------------------*/
+
+.reset-confirm, .reset-error {
+  width: 460px;
+  margin: 15px auto;
+}
+
+.reset-confirm p, .reset-error p {
+  display: block;
+  margin: 0;
+  padding: 10px;
+  text-align: left;
+}
+
+.reset-confirm {
+  border: 1px solid #cccccc;
+  background-color: #ffffdd;
+}
+
+.reset-confirm p {
+    color: #008812;
+}
+
+.reset-error {
+  border: 1px solid #aa0000;
+  background-color: #ffffaa;
+}
+
+.reset-error p {
+  color: #aa0000;
+}

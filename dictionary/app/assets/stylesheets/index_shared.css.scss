@@ -1,0 +1,50 @@
+/*----------------------------------------------------------
+SEARCH PARAMETERS BLOCK
+----------------------------------------------------------*/
+
+.admin-table td.search-params {
+	padding: 0;
+	text-align: left;
+	background-color: #d9f6ff;
+	border-top: 1px solid #b7e8f7;
+	/* border-right: 1px solid #b7e8f7; */
+	border-left: 1px solid #b7e8f7;
+	color: #555555;
+}
+
+	.admin-table td.search-params div.filters {
+		padding: 3px 12px;
+		position: relative;
+	}
+	
+	.admin-table td.search-params h3 {
+		display: block;
+		margin: 0;
+		padding: 6px 0 3px 0;
+		font-size: 13px;
+	}
+	
+	.admin-table td.search-params ul {
+		margin-top: 2px;
+		margin-bottom: 8px;
+	}
+	
+	.admin-table td.search-params li {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+	
+	.admin-table td.search-params p.reset-link {
+		display: block;
+		margin: 0;
+		padding: 6px 10px;
+		width: 280px;
+		position: absolute;
+		top: 0;
+		right: 0;
+		text-align: right;
+	}
+
+.import-table .imported td {
+	background-color: #eee !important;
+}

@@ -1,0 +1,1003 @@
+/*----------------------------------------------------------
+BASIC ELEMENT STYLES
+----------------------------------------------------------*/
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #555555;
+	background-repeat: repeat-x;
+	color: #000000;
+	text-align: center;
+}
+
+div {
+	margin: 0 auto;
+	padding: 0;
+}
+
+form {
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+	color: #2d74ad;
+	font-weight: normal;
+	font-style: italic;
+	font-family: Georgia, "Times New Roman", serif;
+	font-size: 26px;
+	line-height: 27px;
+	text-align: center;
+	}
+
+h2 {
+	color: #2d74ad;
+	font-weight: normal;
+	font-size: 22px;
+	font-family: Georgia, "Times New Roman", serif;
+	line-height: 20px;
+}
+
+h3 {
+	color: #000000;
+	font-weight: bold;
+	font-size: 13px;
+	line-height: 16px;
+	margin-top: 12px;
+	margin-bottom: 12px;
+}
+
+img, a img {
+	border: 0 none;
+	outline: 0 none;
+}
+
+a, a:link, a:visited {
+	color: #2d74ad;
+	text-decoration: none;
+}
+
+a:hover, a:focus {
+	color: #266399;
+	text-decoration: underline;
+}
+
+body, div, td, th, li, p {
+	font-family: Verdana, Arial, Geneva, sans-serif;
+	font-size: 12px;
+	line-height: 15px;
+}
+
+p, ul {
+	margin-top: 8px;
+	margin-bottom: 8px;
+}
+
+p strong, li strong {
+	color: #000000;
+	font-weight: bold;
+}
+
+/*----------------------------------------------------------
+MAIN TEMPLATE LAYOUT STYLES
+----------------------------------------------------------*/
+
+#container {}
+
+	#containerPad {
+		padding: 15px;
+		position: relative;
+	}
+
+#header {
+	background-color: #8ccbdc;
+	background-image: url(../images/header_bg_left.gif);
+	background-position: left top;
+	background-repeat: repeat-y;
+	color: #000000;
+	text-align: left;
+}
+
+	#header a, #header a:link, #header a:visited {
+		color: #ffffff;
+	}
+
+	#header h1 {
+		display: block;
+		margin: 0;
+		text-align: left;
+		color: #ffffff;
+		font-size: 24px;
+	}
+
+	#header p.user {
+		margin: 0;
+		display: block;
+		padding: 2px 0 0 0;
+		font-size: 11px;
+	}
+
+	#headerLeft {
+		width: 400px;
+		float: left;
+	}
+
+		#headerLeft div.pad {
+			padding: 9px 0 6px 9px;
+		}
+
+	#headerRight {
+		width: 600px;
+		float: right;
+	}
+
+		#headerRight div.pad {
+			padding: 20px 0 0 0;
+		}
+
+		#seasonTabs {}
+
+			#seasonTabs ul, #seasonTabs li {
+				display: block;
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+			}
+
+			#seasonTabs ul {
+				text-align: right;
+				margin: 0 0 0 auto;
+				padding: 0 12px 0 0;
+			}
+
+			#seasonTabs li {
+				width: 120px;
+				float: right;
+				text-align: center;
+			}
+
+
+
+			#seasonTabs li.label {
+				width: 80px;
+				text-align: right;
+			}
+
+				#seasonTabs a {
+					display: block;
+					margin: 0;
+					padding: 0;
+					text-align: center;
+				}
+
+					#seasonTabs a span {
+						display: block;
+						margin: 0;
+						padding: 0;
+					}
+
+					#seasonTabs a span.pad {
+						padding: 16px  2px 12px 2px;
+					}
+
+				#seasonSelectTab {
+					width: 175px;
+					margin: 0 15px 0 auto;
+					padding: 0;
+					text-align: center;
+					background-color: #000;
+					color: #5ac;
+					border-top: 1px solid #000;
+					border-right: 1px solid #000;
+					border-left: 1px solid #000;
+					border-top-right-radius: 6px;
+					border-top-left-radius: 6px;
+				}
+
+				#seasonSelectTab .tab-form-wrap {
+					margin: 0;
+					padding: 3px 2px;
+				}
+
+				#seasonSelectTab select {
+					margin-top: 1px;
+					font-size: 15px;
+					line-height: 18px;
+					border: 1px solid #000;
+					padding: 4px;
+					background-color: #333;
+					color: #fff;
+					text-shadow: -1px 1px 2px #000;
+				}
+
+				#seasonSelectTab .tab-display-wrap {
+					padding: 6px 2px;
+				}
+
+				#seasonSelectTab .tab-display-wrap p {
+					margin: 1px 0;
+					padding: 0;
+				}
+
+				#seasonSelectTab .tab-display-wrap p.season-name {
+					font-size: 15px;
+					line-height: 18px;
+					color: #fff;
+					text-shadow: -1px 1px 2px #000;
+				}
+
+				#seasonTabs a, #seasonTabs a:link, #seasonTabs a:visited {
+					color: #bbbbbb;
+					background-color: #4a4f55;
+					text-decoration: none;
+					font-family: Georgia, "Times New Roman", serif;
+					font-size: 16px;
+					background-image: url(../images/season_tabs_top.gif);
+					background-repeat: repeat-x;
+					background-position: 0px 0px;
+				}
+
+					#seasonTabs a span.left, #seasonTabs a:link span.left, #seasonTabs a:visited span.left {
+						background-image: url(../images/season_tabs_left.gif);
+						background-repeat: no-repeat;
+						background-position: left top;
+					}
+
+					#seasonTabs a span.right, #seasonTabs a:link span.right, #seasonTabs a:visited span.right {
+						background-image: url(../images/season_tabs_right.gif);
+						background-repeat: no-repeat;
+						background-position: right top;
+					}
+
+					#seasonTabs a span.pad {
+						padding: 20px  2px 12px 2px;
+					}
+
+				#seasonTabs a:hover, #seasonTabs a:focus {
+					background-color: #313438;
+					color: #ffffff;
+					text-decoration: none;
+					background-position: 0px -100px;
+				}
+
+					#seasonTabs a:hover span.left, #seasonTabs a:focus span.left {
+						background-position: 0px -100px;
+					}
+
+					#seasonTabs a:hover span.right, #seasonTabs a:focus span.right {
+						background-position: right -100px;
+					}
+
+				#seasonTabs .selected a, #seasonTabs .selected a:link, #seasonTabs .selected a:visited,
+				#seasonTabs .selected a:hover, #seasonTabs .selected a:focus {
+					background-position: 0px -200px;
+					background-color: #000000;
+					color: #ffffff;
+				}
+					#seasonTabs .selected a span.left, #seasonTabs .selected a:link span.left,
+					#seasonTabs .selected a:visited span.left,
+					#seasonTabs .selected a:hover span.left, #seasonTabs .selected a:focus span.left {
+						background-position: 0px -200px;
+					}
+
+					#seasonTabs .selected a span.right, #seasonTabs .selected a:link span.right,
+					#seasonTabs .selected a:visited span.right,
+					#seasonTabs .selected a:hover span.right, #seasonTabs .selected a:focus span.right {
+						background-position: right -200px;
+					}
+
+					#seasonTabs .selected a span.pad {
+						padding: 16px  2px 16px 2px;
+					}
+
+			#seasonTabs li.label span {
+				display: block;
+				margin: 0;
+				padding: 26px 5px 0 0;
+				font-size: 12px;
+			}
+
+	#headerBtm {
+		margin: 0;
+		clear: both;
+		height: 4px;
+		background-color: #000000;
+		padding: 0;
+		line-height: 1px;
+	}
+
+#adminNav {}
+
+#sectionsMenu {
+	white-space: nowrap;
+	color: #ffffff;
+	text-align: right;
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 10;
+	float: right;
+	padding: 16px;
+}
+
+	#sectionsMenu form {
+		margin: 0;
+		padding: 0;
+	}
+
+	#sectionsMenu select {
+		margin-left: 2px;
+	}
+
+#primaryNav {
+	position: relative;
+	float: left;
+}
+
+	#primaryNav ul, #primaryNav li {
+		display: block;
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+	}
+
+		#primaryNav ul {
+			position: relative;
+			border-left: 1px solid #222;
+			height: 28px;
+			background-image: url(../images/adminnav_ul_bg_btm.gif);
+			background-position: left bottom;
+			background-repeat: repeat-x;
+			border-top-left-radius: 5px;
+		}
+
+		#primaryNav li {
+			width: 128px;
+			float: left;
+			text-align: center;
+			padding-right: 1px;
+		}
+
+		#primaryNav li a, #primaryNav li a span {
+			display: block;
+			margin: 0;
+			padding: 0;
+		}
+
+			#primaryNav li a span {
+				padding: 5px 5px 0 5px;
+			}
+
+			#primaryNav li a {
+				height: 26px;
+			}
+
+			#primaryNav a, #primaryNav a:link, #primaryNav a:visited {
+				background-color: #aaaaaa;
+				color: #266399;
+				border-top: 1px solid #000000;
+				border-right: 1px solid #000000;
+				border-bottom: 1px solid #000000;
+				font-size: 12px;
+				font-weight: bold;
+				line-height: 15px;
+				text-decoration: none;
+				border-top-left-radius: 5px;
+				border-top-right-radius: 5px;
+			}
+
+			#primaryNav a:hover, #primaryNav a:focus {
+				background-color: #929292;
+				color: #000000;
+				text-decoration: none;
+			}
+
+			#primaryNav .selected a, #primaryNav .selected a:link, #primaryNav .selected a:visited,
+			#primaryNav .selected a:hover, #primaryNav .selected a:focus {
+				background-color: #ffffff;
+				color: #000000;
+				border-bottom: 1px solid #ffffff;
+				font-weight: bold;
+			}
+
+#subNav {
+	border-right: 1px solid #000000;
+	border-left: 1px solid #000000;
+	background-color: #ffffff;
+	clear: both;
+}
+
+	#secondaryNav {
+		padding: 6px 9px;
+		border-bottom: 1px solid #cccccc;
+	}
+
+		#secondaryNav p {
+			display: block;
+			margin: 0;
+			text-align: center;
+			color: #999999;
+		}
+
+			#secondaryNav p a {
+				margin-right: 4px;
+				margin-left: 4px;
+			}
+
+		#secondaryNav a, #secondaryNav a:link, #secondaryNav a:visited {
+			text-decoration: none;
+		}
+
+		#secondaryNav a:hover, #secondaryNav a:focus {
+			color: #000000;
+			text-decoration: none;
+		}
+
+		#secondaryNav a.selected, #secondaryNav a.selected:link, #secondaryNav a.selected:visited,
+		#secondaryNav a.selected:hover, #secondaryNav a.selected:focus {
+			color: #000000;
+			font-weight: bold;
+		}
+
+#memberIDForm input {
+	vertical-align: middle;
+	margin-bottom: 2px;
+}
+
+#content {
+	position: relative;
+	clear: both;
+	border-right: 1px solid #000000;
+	border-left: 1px solid #000000;
+	background-color: #ffffff;
+	color: #767676;
+}
+
+	#contentBgPad {
+		margin: 0;
+		padding: 2px;
+	}
+
+	#contentBgTL {
+		background-image: url(../images/corner_topleft.gif);
+		background-repeat: no-repeat;
+		background-position: left top;
+		background-color: #ffffff;
+	}
+
+	#contentBgTR {
+		background-image: url(../images/corner_topright.gif);
+		background-repeat: no-repeat;
+		background-position: right top;
+	}
+
+	#contentBgBL {
+		background-image: url(../images/corner_btmleft.gif);
+		background-repeat: no-repeat;
+		background-position: left bottom;
+	}
+
+	#contentBgBR {
+		background-image: url(../images/corner_btmright.gif);
+		background-repeat: no-repeat;
+		background-position: right bottom;
+	}
+
+	#contentPad {
+		padding: 24px 32px 38px 32px;
+	}
+
+/*----------------------------------------------------------
+ADMIN TABLE (list) STYLES
+----------------------------------------------------------*/
+
+.admin-table {
+	text-align: center;
+}
+
+.admin-table table {
+	margin: 0 auto;
+}
+
+.admin-table .column-labels th {
+	background-color: #dddddd;
+	color: #000000;
+	font-weight: normal;
+	font-size: 11px;
+	padding: 4px 7px;
+	white-space: nowrap;
+	border-top: 1px solid #c2c2c2;
+	border-right: 1px solid #eeeeee;
+	border-bottom: 1px solid #0089b0;
+	border-left: 1px solid #bbbbbb;
+}
+
+.admin-table tr.main {
+	background-color: #ffffff;
+}
+
+.admin-table tr.even {
+	background-color: #f3f3f3;
+}
+
+.admin-table tr.odd {
+	background-color: #ffffff;
+}
+
+.admin-table tr.inactive {
+	background-color: #cccccc;
+	color: #676767;
+}
+
+.admin-table tr.main:hover, .admin-table tr.main:focus {
+	background-color: #ffffbb;
+	color: #000000;
+}
+
+.admin-table tr.main td.primary {
+	font-weight: normal;
+	/* color: #0089b0; */
+	color: #000000;
+}
+
+.admin-table tr.main td {
+	padding: 3px 7px;
+	font-size: 11px;
+	line-height: 14px;
+	border-bottom: 1px solid #dddddd;
+}
+
+.admin-table tr.main td.btn-cell {
+	padding: 3px;
+}
+
+.admin-table .monospace {
+	font-size: 11px;
+	font-family: "DejaVu Sans Mono", "Lucida Console", Consolas, "Andale Mono", "Bitstream Vera Sans Mono", monospace;
+}
+
+.admin-table tr.main td.empty {
+	background-color: #dddddd;
+}
+
+.admin-table th.sortable {
+	padding: 0;
+}
+
+	.admin-table th.sortable a {
+		display: block;
+		padding: 4px 7px;
+	}
+
+.admin-table .column-labels .active-asc,
+.admin-table .column-labels .active-desc {
+	padding: 0;
+	border: 1px solid #333;
+}
+
+	.admin-table .column-labels .active-asc a,
+	.admin-table .column-labels .active-desc a {
+		padding-left: 25px;
+		font-weight: bold;
+		color: #ffffff;
+		background-color: #353535;
+		background-position: left center;
+		background-repeat: no-repeat;
+	}
+
+	.admin-table .column-labels .active-asc a {
+		background-image: url(../images/sort_asc_bg.gif);
+	}
+
+	.admin-table .column-labels .active-desc a {
+		background-image: url(../images/sort_desc_bg.gif);
+	}
+
+#bulkRiderAddTable {
+	border-left: 1px solid #ddd !important;
+}
+
+#bulkRiderAddTable td {
+	border-right: 1px solid #ddd !important;
+}
+
+/*----------------------------------------------------------
+CONFIRM DELETE MODAL WINDOW STYLES
+----------------------------------------------------------*/
+
+#confirmDeleteBlock {
+	width: 500px;
+	height: 200px;
+	text-align: center;
+}
+
+#confirmDeleteBlock div.block-pad {
+	padding: 20px 32px;
+}
+
+	#confirmDeleteBlock h3 {
+		margin-top: 0;
+		font-size: 20px;
+		line-height: 25px;
+		font-family: Georgia, "Times New Roman", serif;
+		font-style: italic;
+		font-weight: normal;
+		color: #aa0000;
+	}
+
+	#confirmDeleteBlock table {
+		margin: 0 auto;
+		border-top: 1px solid #dddddd;
+		border-right: 1px solid #dddddd;
+	}
+
+	#confirmDeleteBlock td {
+		padding: 3px 8px;
+		border-bottom: 1px solid #dddddd;
+		border-left: 1px solid #dddddd;
+	}
+
+	#confirmDeleteBlock table.delete-confirm-info td.field-name {
+		text-align: right;
+		font-weight: normal;
+		background-color: #f2f2f2;
+	}
+
+	#confirmDeleteBlock table.delete-confirm-info td.field-value {
+		text-align: left;
+		color: #000000 !important;
+	}
+
+	#confirmDeleteBlock p.delete-buttons {
+		display: block;
+		margin: 0 auto;
+		padding-top: 20px;
+	}
+
+/*----------------------------------------------------------
+SEARCH MODAL WINDOW STYLES
+----------------------------------------------------------*/
+
+#searchBlock {
+	padding: 0;
+	text-align: center;
+	width: 720px;
+}
+
+#searchBlock div.block-pad {
+	padding: 20px 32px;
+}
+
+	#searchBlock h3 {
+		margin-top: 0;
+		font-size: 20px;
+		line-height: 25px;
+		font-family: Georgia, "Times New Roman", serif;
+		font-style: italic;
+		font-weight: normal;
+		color: #0089b0;
+	}
+
+	#searchBlock table {
+		margin: 0 auto;
+		background-color: #eeeeee;
+		border: 1px solid #dddddd;
+		padding: 4px;
+	}
+
+	#searchBlock td, #searchBlock th {
+		padding: 2px 6px;
+		white-space: nowrap;
+	}
+
+	#searchBlock th {
+		text-align: right;
+	}
+
+	#searchBlock td {
+		text-align: left;
+	}
+
+	#searchBlock p.submit-btn {
+		margin-top: 12px;
+	}
+
+/*----------------------------------------------------------
+MODAL SELECTOR TABLES
+----------------------------------------------------------*/
+
+#newSelector {
+	margin: 0;
+	padding: 0;
+}
+
+	#newSelector div.modal-pad {
+		padding-right: 4px;
+	}
+
+	#newSelector h3 {
+		display: block;
+		margin: 0;
+		padding: 6px;
+		text-align: center;
+		background-color: #676767;
+		color: #ffffff;
+	}
+
+	#newSelector table {}
+
+		#newSelector td, #newSelector th {
+			font-size: 11px;
+			line-height: 13px;
+			padding: 3px 9px;
+		}
+
+		#newSelector th {
+			background-color: #dddddd;
+			color: #000000;
+			font-weight: normal;
+			border-bottom: 2px solid #aaaaaa;
+			white-space: nowrap;
+		}
+
+		#newSelector td {
+			border-bottom: 1px solid #dddddd;
+		}
+
+			#newSelector tr.odd td {
+				background-color: #ffffff;
+			}
+
+			#newSelector tr.even td {
+				background-color: #eeeeee;
+			}
+
+			#newSelector tr.header td {
+				padding: 0;
+			}
+
+			#newSelector tr.filter td {
+				background-color: #dddddd;
+				color: #000000;
+				padding: 3px;
+			}
+
+				#newSelector tr.filter td input, #newSelector tr.filter td label {
+					vertical-align: middle;
+				}
+
+/*----------------------------------------------------------
+MODAL CONFIRM DELETE STYLES
+----------------------------------------------------------*/
+
+.modal-confirm {
+	width: 420px;
+	text-align: center;
+}
+
+	.modal-confirm .pad {
+		padding: 6px;
+	}
+
+	.modal-confirm h3 {
+		color: #aa0000;
+	}
+
+	.modal-confirm p.info {
+		color: #000000;
+	}
+
+	.modal-confirm p.sub-text {
+		color: #787878;
+		font-size: 10px;
+	}
+
+	.modal-confirm hr {
+		background-color: #aa0000;
+		height: 1px;
+		margin: 9px auto;
+		border: 0 none;
+	}
+
+/*----------------------------------------------------------
+MODAL INFO POPUP STYLES
+----------------------------------------------------------*/
+
+.modal-info {
+	width: 420px;
+	text-align: center;
+}
+
+	.modal-info .pad {
+		padding: 6px;
+	}
+
+	.modal-info h3 {
+		color: #000000;
+		text-align: left;
+		font-size: 12px;
+	}
+
+	.modal-info p {
+		text-align: left;
+	}
+
+/*----------------------------------------------------------
+MODAL EDITOR STYLES
+----------------------------------------------------------*/
+
+.modal-editor {
+	width: 740px;
+	height: 75%;
+	text-align: center;
+}
+
+	.modal-editor .pad {
+		padding: 6px;
+	}
+
+	.in-transit {
+		border-top: 1px solid #000000;
+		border-bottom: 1px solid #000000;
+	}
+
+/*----------------------------------------------------------
+FORM SUB-LISTS
+----------------------------------------------------------*/
+
+.form-sublist th {
+	text-align: center !important;
+}
+
+.form-sublist td.right {
+	text-align: right !important;
+}
+
+.form-sublist td.left {
+	text-aign: left !important;
+}
+
+/*----------------------------------------------------------
+MISCELLANEOUS SHARED CLASS STYLES
+----------------------------------------------------------*/
+
+hr.divider {
+	background-color: #cfe0c2;
+	height: 1px;
+	border: 0 none;
+	}
+
+div.clear-both {
+	clear: both;
+	line-height: 1px;
+	height: 1px;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	}
+
+.align-right {
+	float: right;
+	}
+
+	img.align-right {
+		padding-left: 16px;
+		}
+
+.error-container {
+	border: 1px solid #cc0000;
+	background-color: #ffffcc;
+}
+
+	.error-pad {
+		padding: 10px;
+	}
+
+		.error-container p {
+			text-align: center;
+			color: #cc0000;
+			font-size: 14px;
+			margin: 0 auto;
+		}
+
+.error-modal {
+	margin: 0;
+	padding: 0;
+	background-color: #ffffcc;
+}
+
+	.error-modal .error-pad {
+		padding: 15px;
+		text-align: left;
+	}
+
+	.error-modal h3 {
+		display: block;
+		font-size: 16px;
+		font-weight: bold;
+		color: #cc0000;
+		text-align: center;
+		margin: 0 auto 10px auto;
+		padding: 3px 0 10px 0;
+		border-bottom: 1px solid #ddddaa;
+	}
+
+	.error-modal li {
+		color: #000;
+		text-align: left;
+	}
+
+	.error-modal .admin-override-msg {
+		border-top: 1px solid #ddddaa;
+		text-align: center;
+	}
+
+.highlight {
+	background-color: #ffffaa;
+}
+
+.highlight2 {
+	background-color: #ddf4ff;
+}
+
+.confirm-msg {
+	border: 1px solid #dddddd;
+	width: 600px;
+	margin: 4px auto;
+	padding: 0;
+}
+
+	.confirm-msg p {
+		display: block;
+		margin: 0;
+		padding: 5px;
+		text-align: center;
+		color: #0089b0;
+	}
+
+.black {
+	color: #000000;
+}
+
+.red {
+	color: #bb0000;
+}
+
+.green {
+	color: #118833;
+}
+
+.cancel-btn {
+	margin-right: 80px;
+}
+
+.nowrap {
+	white-space: nowrap;
+}
+
+.mp-closeable {
+	position: relative;
+}
+
+	.mp-closeable .mp-close-parent {
+		width: 12px;
+		height: 12px;
+		position: absolute;
+		top: 0;
+		right: 0;
+		margin-top: -3px;
+		margin-right: -3px;
+	}
+
+	.mp-closeable .mp-close-parent a {
+		display: block;
+		width: 12px;
+		height: 12px;
+		line-height: 2px;
+		background-image: url(../images/btn_close_small.gif);
+	}
+
+	.mp-closeable .mp-close-parent a span {
+		display: none;
+	}

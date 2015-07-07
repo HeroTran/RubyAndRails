@@ -1,0 +1,47 @@
+<div>
+	<%= form_for(@japanese) do |f| %>
+	<% if @japanese.errors.any? %>
+	<div id="error_explanation">
+		<h2><%= pluralize(@japanese.errors.count, "error") %> prohibited this japanese from being saved:</h2>
+
+		<ul>
+			<% @japanese.errors.full_messages.each do |msg| %>
+			<li>
+				<%= msg %>
+			</li>
+			<% end %>
+		</ul>
+	</div>
+	<% end %>
+
+<table class="table-language">
+		<tbody>
+			<tr>
+				<th><%= f.label :word_japanese %></th>
+				<td><%= f.text_field :word_japanese %></td>
+			</tr>
+			<tr>
+				<th><%= f.label :word_vietnamese %></th>
+				<td><%= f.text_field :word_vietnamese %></td>
+			</tr>
+			<tr>
+				<th><%= f.label :sound_word %></th>
+				<td><%= f.file_field :sound_word %></td>
+			</tr>
+			<tr>
+				<th><%= f.label :deleted %></th>
+				<td><%= select_tag :deleted, options_for_select([['On', '0'], ['Off', '1']], :selected => params[:deleted]) %></td>
+			</tr>
+			<tr>
+				<th><%= f.label :note %></th>
+				<td><%= f.text_field :note %></td>
+			</tr>
+			<tr>
+				<<td class="bottom" colspan="2"><%= f.submit nil,  :class => 'button'%></td>
+			</tr>
+		</tbody>
+	</table>
+	<p>
+	</p>
+	<% end %>
+</div>

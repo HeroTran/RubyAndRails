@@ -1,0 +1,43 @@
+<h1>Listing japaneses</h1>
+<h2 style="text-align: left; margin-left: 130px;"> <%= link_to 'New Japanese', new_japanese_path %></h2>
+<div class="search_admin">
+	<%= form_tag(japaneses_path, method: "get") do %>
+	<%= text_field_tag(:search,params[:search],class: "text_search_admin") %>
+	<%= submit_tag "Search", class: "button_search_admin"%>
+	<% end %>
+</div>
+<table class="features-table">
+    <thead>
+        <tr>
+            <th>Word japanese</th>
+            <th>Word vietnamese</th>
+            <th>Sound word</th>
+            <th>Note</th>
+            <th>Deleted</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @japaneses.each do |japanese| %>
+        <tr>
+            <td><%= japanese.word_japanese.force_encoding("UTF-8") %></td>
+            <td style="white-space: pre-line;"><ul><li><%= simple_format(japanese.word_vietnamese.force_encoding("UTF-8").gsub(/;/, '</li><li>'))%>
+
+           </li></ul></td>
+            <td><%= japanese.sound_word %></td>
+            <td><%= japanese.note %></td>
+            <% if japanese.deleted == 1%>
+            <td> Deleted</td>
+            <%else%>
+            <td>Active</td>
+            <%end%>
+            <td><%= link_to 'Show', japanese %>
+            <%= link_to 'Edit', edit_japanese_path(japanese) %>
+            <%= link_to 'Destroy', japanese, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+        <% end %>
+    </tbody>
+</table>
+<%= will_paginate @japaneses %>
+<br>
+
